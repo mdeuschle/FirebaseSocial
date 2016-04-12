@@ -19,9 +19,15 @@
 		A8B7359D1CBC9EC1005C74D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B7359C1CBC9EC1005C74D7 /* Constants.swift */; };
 		A8B7359F1CBCA76A005C74D7 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B7359E1CBCA76A005C74D7 /* MaterialButton.swift */; };
 		A8B735A11CBCAA78005C74D7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B735A01CBCAA78005C74D7 /* CustomTextField.swift */; };
+		A8B735A61CBCB42B005C74D7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B735A31CBCB42B005C74D7 /* FBSDKCoreKit.framework */; };
+		A8B735A71CBCB42B005C74D7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B735A41CBCB42B005C74D7 /* FBSDKLoginKit.framework */; };
+		A8B735A81CBCB42B005C74D7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B735A51CBCB42B005C74D7 /* Bolts.framework */; };
+		C08CE2F5A090D6E05C7CF1BF /* libPods-SocialFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C085EBE0A86475B87A9B65E5 /* libPods-SocialFeed.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03720A2AE1D3E26211B22D00 /* Pods-SocialFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed.release.xcconfig"; sourceTree = "<group>"; };
+		0DD288973FCA6A3A3D68F1A0 /* Pods-SocialFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B735741CBC6F89005C74D7 /* SocialFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B735771CBC6F89005C74D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8B735791CBC6F89005C74D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,10 @@
 		A8B7359C1CBC9EC1005C74D7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8B7359E1CBCA76A005C74D7 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		A8B735A01CBCAA78005C74D7 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A8B735A31CBCB42B005C74D7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		A8B735A41CBCB42B005C74D7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A8B735A51CBCB42B005C74D7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C085EBE0A86475B87A9B65E5 /* libPods-SocialFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B735A81CBCB42B005C74D7 /* Bolts.framework in Frameworks */,
+				A8B735A71CBCB42B005C74D7 /* FBSDKLoginKit.framework in Frameworks */,
+				A8B735A61CBCB42B005C74D7 /* FBSDKCoreKit.framework in Frameworks */,
+				C08CE2F5A090D6E05C7CF1BF /* libPods-SocialFeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BE5AA3E3BC07CA16AD2B270 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C085EBE0A86475B87A9B65E5 /* libPods-SocialFeed.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837F99879A79184E7BBC2E46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DD288973FCA6A3A3D68F1A0 /* Pods-SocialFeed.debug.xcconfig */,
+				03720A2AE1D3E26211B22D00 /* Pods-SocialFeed.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A8B7356B1CBC6F89005C74D7 = {
 			isa = PBXGroup;
 			children = (
 				A8B735761CBC6F89005C74D7 /* SocialFeed */,
 				A8B735751CBC6F89005C74D7 /* Products */,
+				837F99879A79184E7BBC2E46 /* Pods */,
+				0BE5AA3E3BC07CA16AD2B270 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +101,7 @@
 		A8B735761CBC6F89005C74D7 /* SocialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				A8B735A21CBCB3FC005C74D7 /* Frameworks */,
 				A8B7359B1CBC9EAC005C74D7 /* Util */,
 				A8B7358C1CBC6FE1005C74D7 /* Resources */,
 				A8B7358B1CBC6FD9005C74D7 /* Model */,
@@ -125,6 +159,16 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		A8B735A21CBCB3FC005C74D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B735A31CBCB42B005C74D7 /* FBSDKCoreKit.framework */,
+				A8B735A41CBCB42B005C74D7 /* FBSDKLoginKit.framework */,
+				A8B735A51CBCB42B005C74D7 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8B735861CBC6F89005C74D7 /* Build configuration list for PBXNativeTarget "SocialFeed" */;
 			buildPhases = (
+				6A38BA6541CCC8FCB5CB17D2 /* Check Pods Manifest.lock */,
 				A8B735701CBC6F89005C74D7 /* Sources */,
 				A8B735711CBC6F89005C74D7 /* Frameworks */,
 				A8B735721CBC6F89005C74D7 /* Resources */,
+				D03FABC4F87DD7B53041662D /* Embed Pods Frameworks */,
+				511CD902E905E8D28A1E5E7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +240,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		511CD902E905E8D28A1E5E7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A38BA6541CCC8FCB5CB17D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D03FABC4F87DD7B53041662D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8B735701CBC6F89005C74D7 /* Sources */ = {
@@ -317,22 +412,34 @@
 		};
 		A8B735871CBC6F89005C74D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD288973FCA6A3A3D68F1A0 /* Pods-SocialFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialFeed",
+				);
 				INFOPLIST_FILE = SocialFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mattdeuschle.SocialFeed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattdeuschle.SocialFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		A8B735881CBC6F89005C74D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03720A2AE1D3E26211B22D00 /* Pods-SocialFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialFeed",
+				);
 				INFOPLIST_FILE = SocialFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mattdeuschle.SocialFeed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattdeuschle.SocialFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -356,6 +463,7 @@
 				A8B735881CBC6F89005C74D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
