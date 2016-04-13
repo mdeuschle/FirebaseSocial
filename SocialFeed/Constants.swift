@@ -10,3 +10,8 @@ import Foundation
 import UIKit
 
 let shadowColor: CGFloat = 157.0 / 255.0
+let keyUid = "uid"
+let loginSegue = "LoginSegue"
+
+let acccountNonExist = -8
+

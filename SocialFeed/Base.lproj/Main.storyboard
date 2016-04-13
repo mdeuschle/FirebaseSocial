@@ -104,7 +104,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tek-1t-Rhf" customClass="MaterialButton" customModule="SocialFeed" customModuleProvider="target">
                                         <rect key="frame" x="77" y="203" width="189" height="55"/>
@@ -116,6 +116,9 @@
                                         <state key="normal" title="Login / Sign up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="emailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bom-dC-M46"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,10 +152,34 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="fIH-EW-Irl" id="etM-G9-TOc"/>
+                        <outlet property="passwordTextField" destination="B9X-xf-RZ4" id="36U-6y-wke"/>
+                        <segue destination="e7g-HF-GmD" kind="show" identifier="LoginSegue" id="Whn-Dr-Mhm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401.5" y="376.5"/>
+            <point key="canvasLocation" x="436.5" y="376.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DKN-Ti-plE">
+            <objects>
+                <viewController id="e7g-HF-GmD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lkX-VE-RoY"/>
+                        <viewControllerLayoutGuide type="bottom" id="dFA-mv-dCx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1zF-gE-ajn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27058823529999998" green="0.67450980390000004" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fW8-cY-Gsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.5" y="376.5"/>
         </scene>
     </scenes>
 </document>
