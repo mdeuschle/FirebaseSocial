@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D911ED20FF5425D962539B6 /* Pods_SocialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FC5C5C4E178213D8A06D55 /* Pods_SocialFeed.framework */; };
 		A8904D8C1CC1D152000761D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8904D8B1CC1D152000761D9 /* Assets.xcassets */; };
+		A8904DAE1CC74E37000761D9 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8904DAD1CC74E36000761D9 /* Posts.swift */; };
 		A8B735781CBC6F89005C74D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B735771CBC6F89005C74D7 /* AppDelegate.swift */; };
 		A8B7357A1CBC6F89005C74D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B735791CBC6F89005C74D7 /* ViewController.swift */; };
 		A8B7357D1CBC6F89005C74D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B7357B1CBC6F89005C74D7 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		03720A2AE1D3E26211B22D00 /* Pods-SocialFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed.release.xcconfig"; sourceTree = "<group>"; };
 		0DD288973FCA6A3A3D68F1A0 /* Pods-SocialFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialFeed/Pods-SocialFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		A8904D8B1CC1D152000761D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SocialFeed/Assets.xcassets; sourceTree = "<group>"; };
+		A8904DAD1CC74E36000761D9 /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		A8B735741CBC6F89005C74D7 /* SocialFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B735771CBC6F89005C74D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8B735791CBC6F89005C74D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		A8B7358B1CBC6FD9005C74D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8904DAD1CC74E36000761D9 /* Posts.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				A8B735781CBC6F89005C74D7 /* AppDelegate.swift in Sources */,
 				A8B735B91CBDE88A005C74D7 /* PostCell.swift in Sources */,
 				A8B7359D1CBC9EC1005C74D7 /* Constants.swift in Sources */,
+				A8904DAE1CC74E37000761D9 /* Posts.swift in Sources */,
 				A8B735B71CBDE6C5005C74D7 /* FeedViewController.swift in Sources */,
 				A8B7359F1CBCA76A005C74D7 /* MaterialButton.swift in Sources */,
 			);

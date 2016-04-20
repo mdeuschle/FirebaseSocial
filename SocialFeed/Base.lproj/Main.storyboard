@@ -184,7 +184,7 @@
                                 <rect key="frame" x="20" y="0.0" width="335" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" rowHeight="414" id="uZi-XM-TYk" customClass="PostCell" customModule="SocialFeed" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="uZi-XM-TYk" customClass="PostCell" customModule="SocialFeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="335" height="414"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uZi-XM-TYk" id="T0N-Fp-RQU">
@@ -284,6 +284,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="descrptionText" destination="K0I-qS-q5g" id="ZhM-Ku-FMw"/>
+                                            <outlet property="likesLabel" destination="gKA-SK-7Pn" id="ytr-BH-BVF"/>
                                             <outlet property="profileImage" destination="brn-kk-Ihl" id="qVO-lg-pvf"/>
                                             <outlet property="showcaseImage" destination="yug-KU-BDO" id="nKd-A9-Bkn"/>
                                         </connections>

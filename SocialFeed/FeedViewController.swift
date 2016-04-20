@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+
+    var posts = [Posts]()
+    static var imageCache = NSCache()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +22,30 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
 
+        tableView.estimatedRowHeight = 414
+
         DataService.ds.refPosts.observeEventType(.Value, withBlock:  { snapshot in
             print(snapshot.value)
+
+            self.posts = []
+
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+
+                for snap in snapshots {
+
+                    print("SNAP: \(snap)")
+
+                    if let postDic = snap.value as? Dictionary<String,AnyObject> {
+
+                        let key = snap.key
+                        let post = Posts(postKey: key, dictionary: postDic)
+                        self.posts.append(post)
+                    }
+                }
+
+            }
+
+            self.tableView.reloadData()
         })
 
     }
@@ -31,14 +57,40 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 5
+        return posts.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        return tableView.dequeueReusableCellWithIdentifier("CellID") as! PostCell
+        let post = posts[indexPath.row]
+
+        if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
+
+            cell.request?.cancel()
+
+            var img: UIImage?
+
+            if let url = post.imageUrl {
+
+                img = FeedViewController.imageCache.objectForKey(url) as? UIImage
+            }
+
+            cell.configureCell(post, img: img)
+            
+            return cell
+        } else {
+            return PostCell()
+        }
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
+        let post = posts[indexPath.row]
 
+        if post.imageUrl == nil {
+            return 150  
+        } else {
+            return tableView.estimatedRowHeight
+        }
+    }
 }
