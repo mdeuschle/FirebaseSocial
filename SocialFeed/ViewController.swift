@@ -41,7 +41,7 @@ class ViewController: UIViewController {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("Succussfully logged in with facebook \(accessToken)")
 
-                DataService.ds.refbase.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                DataService.ds.refBase.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
 
                     if error != nil {
 
@@ -51,6 +51,11 @@ class ViewController: UIViewController {
                     else {
 
                         print("login success! \(authData)")
+
+                        let user = ["provider": authData.provider!]
+                        DataService.ds
+                    .createFirebaseUser(authData.uid, user: user)
+
                         NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: keyUid)
 
                         self.performSegueWithIdentifier(loginSegue, sender: nil)
@@ -66,7 +71,7 @@ class ViewController: UIViewController {
 
         if let email = emailTextField.text where email != "", let password = passwordTextField.text where password != "" {
 
-            DataService.ds.refbase.authUser(email, password: password, withCompletionBlock: { error, authData in
+            DataService.ds.refBase.authUser(email, password: password, withCompletionBlock: { error, authData in
 
                 if error != nil {
 
@@ -74,7 +79,7 @@ class ViewController: UIViewController {
 
                     if error.code == acccountNonExist {
 
-                        DataService.ds.refbase.createUser(email, password: password, withValueCompletionBlock: { error, result in
+                        DataService.ds.refBase.createUser(email, password: password, withValueCompletionBlock: { error, result in
 
                             if error != nil {
 
@@ -83,7 +88,12 @@ class ViewController: UIViewController {
 
                                 NSUserDefaults.standardUserDefaults().setObject(result[keyUid], forKey: keyUid)
 
-                                DataService.ds.refbase.authUser(email, password: password, withCompletionBlock: nil)
+                                DataService.ds.refBase.authUser(email, password: password, withCompletionBlock: {err, authData in
+
+                                    let user = ["provider": authData.provider!, "blah":"emailtest"]
+                                    DataService.ds
+                                        .createFirebaseUser(authData.uid, user: user)
+                                })
 
                                 self.performSegueWithIdentifier(loginSegue, sender: nil)
                             }
