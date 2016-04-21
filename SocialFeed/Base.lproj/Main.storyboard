@@ -193,12 +193,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="wqb-3i-lJf">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="wqb-3i-lJf">
                                                 <rect key="frame" x="230" y="0.0" width="37" height="37"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="IYG-vP-Zkn"/>
                                                     <constraint firstAttribute="width" constant="37" id="Isb-GS-gfc"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="dRf-xP-2b0" appends="YES" id="eEO-ln-qlp"/>
+                                                </connections>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-zY-PU4" customClass="MaterialButton" customModule="SocialFeed" customModuleProvider="target">
                                                 <rect key="frame" x="277" y="0.0" width="50" height="37"/>
@@ -210,6 +214,9 @@
                                                 <state key="normal" title="POST">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postButtonTapped:" destination="e7g-HF-GmD" eventType="touchUpInside" id="nYA-zI-j1s"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -356,10 +363,17 @@
                     <navigationItem key="navigationItem" id="p2O-UC-LRz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="cameraImage" destination="wqb-3i-lJf" id="68a-VI-1Ws"/>
+                        <outlet property="postTextField" destination="mVk-hK-iJ0" id="y5n-Jy-caZ"/>
                         <outlet property="tableView" destination="yKK-2v-2wn" id="kw8-dx-bq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fW8-cY-Gsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dRf-xP-2b0">
+                    <connections>
+                        <action selector="imagedSelectedTapped:" destination="e7g-HF-GmD" id="4oD-iV-iGY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1260.5" y="376.5"/>
         </scene>
