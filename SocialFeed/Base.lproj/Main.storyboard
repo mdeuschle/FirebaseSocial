@@ -335,7 +335,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descrptionText" destination="K0I-qS-q5g" id="ZhM-Ku-FMw"/>
-                                            <outlet property="likesLabel" destination="gKA-SK-7Pn" id="ytr-BH-BVF"/>
+                                            <outlet property="likeImage" destination="G5Z-Gy-pWV" id="Jpr-Cg-eKD"/>
+                                            <outlet property="likesLabel" destination="kNt-vw-2c8" id="asQ-WB-woM"/>
                                             <outlet property="profileImage" destination="brn-kk-Ihl" id="qVO-lg-pvf"/>
                                             <outlet property="showcaseImage" destination="yug-KU-BDO" id="nKd-A9-Bkn"/>
                                         </connections>
